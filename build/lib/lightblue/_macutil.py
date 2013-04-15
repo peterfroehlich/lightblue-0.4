@@ -70,11 +70,7 @@ def formatdevaddr(addr):
 def createbtdevaddr(addr):
     # in mac 10.5, can use BluetoothDeviceAddress directly
     chars = btaddrtochars(addr)
-    try:
-        btdevaddr = _IOBluetooth.BluetoothDeviceAddress(chars)
-        return btdevaddr
-    except:
-        return chars
+    return chars
     
 def btaddrtochars(addr):   
     """
